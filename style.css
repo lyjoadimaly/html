@@ -9,3 +9,33 @@ button{
 .classeg{
     color:lightcoral;
 }
+#firstdiv{
+    background: lightskyblue    ;
+    width: 400px;
+    height: 250px;
+    padding-left: 10px;
+    border: 1px solid;
+    border-color: darkorchid;
+    
+}
+.clrwhite{
+    color: white;
+    font-size: xx-large;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+#seconddiv{
+    background:lightgoldenrodyellow;
+    width: 400px;
+    height: 250px;
+    padding-left: 10px;
+    border: 1px solid;
+    border-color: darkorchid;
+    
+}
+#innerdiv{
+    margin:10px;
+    background:lightslategray;
+    width:200px;
+    height:100px;
+}
