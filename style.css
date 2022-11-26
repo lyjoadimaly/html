@@ -9,7 +9,7 @@ button{
 .classeg{
     color:lightcoral;
 }
-#firstdiv{
+.firstdiv{
     background: lightskyblue    ;
     width: 400px;
     height: 250px;
@@ -24,7 +24,7 @@ button{
     margin-left: 50px;
     margin-top: 100px;
 }
-#seconddiv{
+.seconddiv{
     background:lightgoldenrodyellow;
     width: 400px;
     height: 250px;
@@ -33,7 +33,7 @@ button{
     border-color: darkorchid;
     
 }
-#innerdiv{
+.inner-div{
     margin:10px;
     background:lightslategray;
     width:200px;
