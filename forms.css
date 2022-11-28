@@ -1,0 +1,22 @@
+.enrollform{
+    
+}
+.submit-btn{
+    background: blue;
+    color: white;
+    width: 150px;
+    border: 2px;
+    box-sizing: 1 px;
+    border-color: brown;
+}
+.submit-btn:hover{
+    background: olive;
+}
+.bankinput{
+    height: 15px;
+    width: 300px;
+    border-radius: 7px;
+    font-size: 12px;
+    border-color: blue;
+    padding: 10px;
+}

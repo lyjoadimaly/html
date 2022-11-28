@@ -21,7 +21,8 @@
     background: indianred;
 }
 .content{
-    height: 400px;;
+    height: 400px;
+    background-image: linear-gradient(red, yellow);
 }
 
 .body{
