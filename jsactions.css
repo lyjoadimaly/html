@@ -1,0 +1,7 @@
+.resultscreen{
+    width: 100%;
+    height: 200px;
+    background: olivedrab;
+    border: solid 2px;
+    border-color: blueviolet;
+}

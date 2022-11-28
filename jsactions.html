@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java script Actions </title>
+    <link rel="stylesheet" href="jsactions.css" type="text/css" >
+</head>
+<body>
+    <a href="index.html">Going to First Page</a>
+    <H2>Javascript actions</H2>
+    <input type="text" id="tName">
+    <button onclick="dispName()">Show</button>
+    <h1 id="display-tname">Here</h1>
+    <div class="resultscreen">
+        <h1 id="resultcolor">Result</h1>
+    </div>
+    <div>
+        <button onclick="ShowBtnColor('Red')">Red</button>
+        <button onclick="ShowBtnColor('Blue')">Blue</button>
+        <button onclick="ShowBtnColor('Green')">Green</button>
+        <button onclick="ShowBtnColor('Orange')">Orange</button>
+        <button onclick="ShowBtnColor('Pink')">Pink</button>
+    </div>
+    <script>
+        function dispName()
+        {
+            var txtFName = document.getElementById("tName").value
+            document.getElementById("display-tname").innerHTML= txtFName
+            window.alert("Show Button Clicked : "+txtFName)
+            if(txtFName=="Lyjo"){
+                alert("Your entry is correct")
+            }
+        }
+        function ShowBtnColor(txtColor)
+        {
+            document.getElementById("resultcolor").style.background= txtColor
+        }
+    </script>
+</body>
+</html>

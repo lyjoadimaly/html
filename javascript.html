@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Example</title>
+
+</head>
+<body>
+    <a href="index.html">Going to First Page</a>
+    <H2>Javascript example [ Showing result in console(Developer tool)]</H2>
+    <button onclick="show()">Click Here (Show output in Console)</button>
+    <button onclick="forloop()">for Loop</button>
+    <button onclick="arraymvalue()">Array with muliple type value</button>
+    <button onclick="objectarray()">Object Array with Multiple type values</button>
+    <button onclick="arrayobjects()">Multiple Object Array example</button>
+    <script>
+        function show(){
+            console.log("Button Clicked : This code is written in script tag > function funname()")
+            console.log("var /let declaration - let multiple time declaration prohibited, var multiple time declaration allowed ")
+            var firstnum = 10;
+            var secondnum =20;
+            var totalvalue =firstnum+secondnum
+            console.log("Sum of Two Numbers = " + totalvalue)
+            const constpivalue = 3.14
+            console.log("const example = " + constpivalue + " const value can't be changed")
+            if(firstnum%2==0){
+                console.log("First number is " + firstnum + " Number is Even")
+            }else {
+                console.log("First number is " + firstnum + " Number is Odd")
+            }
+            console.log("Function create / Calling")
+            funcreation()
+        }
+        function forloop(){
+            for (var icounter = 1; icounter<=20;icounter++) {
+                console.log("Value of icounter (1 to 20) in for loop is " + icounter)
+            }
+        }
+        function arraymvalue(){
+            var arrvalues =["Lyjo","Leyona","Liyon",45]
+            console.log(arrvalues)
+            console.log("Second value of array is " +arrvalues[1])
+        }
+        function objectarray(){
+            var shareholders={
+                Name:"Lyjo Joseph", Age :45, Place:"Adimaly",Sex:"Male"
+            }
+            console.log("Array values : " +shareholders)
+            console.log("Name :"+shareholders.Name)
+        }
+        function arrayobjects(){
+            var shareholders=[{
+                Name:"Lyjo Joseph", Age :45, Place:"Adimaly",Sex:"Male"
+        },{
+                Name:"Liyon", Age :5, Place:"Adimaly",Sex:"Male"
+        },{
+                Name:"Leyona", Age :12, Place:"Adimaly",Sex:"Female"
+        }]
+            console.log("Array values : " +shareholders)
+            console.log("Name 1st Preson :"+shareholders[1].Name)
+        }
+        function funcreation(){
+            console.log("example of Function creation:Eg.")
+        }
+</script>
+</body>
+</html>
