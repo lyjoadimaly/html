@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Example</title>
+</head>
+<body>
+    <a href="index.html">Going to First Page</a>
+    <h6>Managed actions : click / mouseenter / mouseleave / keypress / keydown / keyup / submit</h6>
+    <h6>select / focus/ blur/ load /scroll</h6>
+    <button id="btnjQuery">jQuery Click</button>
+    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btnjQuery").click(function(){
+                alert('jQuery Button Clicked by Mouse')
+            })
+        })
+    </script>
+</body>
+</html>
