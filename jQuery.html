@@ -1,23 +1,117 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jQuery Example</title>
 </head>
+
 <body>
     <a href="index.html">Going to First Page</a>
     <h6>Managed actions : click / mouseenter / mouseleave / keypress / keydown / keyup / submit</h6>
     <h6>select / focus/ blur/ load /scroll</h6>
     <button id="btnjQuery">jQuery Click</button>
-    <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
+    <input name="fname" type="text" id="name">
+    <label style="display: none;" id="errmsg">Enter minimum 8 Letters</label>
+    <input name="house" type="text" id="house">
+    <br>
+    <div>
+        <form class="applform" action="jQuery.html" id="applform">
+            <label for="">Place:</label>
+            <input name="place" type="text" id="place" placeholder="Enter Place">
+            <label for="">Post:</label>
+            <input name="post" type="text" id="post" placeholder="Enter Post">
+            <label for="">PIN:</label>
+            <input name="pin" type="text" id="pin">
+            <label for="">DOB</label>
+            <input type="date" name="dob" id="">
+            <label for="">Mobile:</label>
+            <input name="mobile" type="text" id="mobile">
+            <label for="">Sex</label>
+            <input type="radio" name="Male" id="">
+            <label for="">Male</label>
+            <input type="radio" name="Male" id="">
+            <label for="">Female</label>
+            <input type="radio" name="Male" id="">
+            <label for="">Custom</label>
+            <br>
+            <label for="">Em@il:</label>
+            <input name="emailAddress" type="email" name="" id="">
+            <label for="">Family Members</label>
+            <select name="famMembers" id="">
+                <option value="">Members</option>
+                <option value="2">02</option>
+                <option value="3">03</option>
+                <option value="4">04</option>
+                <option value="5">05</option>
+                <option value="6">06</option>
+                <option value="7">07</option>
+                <option value="8">08</option>
+                <option value="9">09</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+            </select>
+            <button type="submit">Submit Form</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.1.js"
+        integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI=" crossorigin="anonymous"></script>
     <script>
-        $(document).ready(function(){
-            $("#btnjQuery").click(function(){
+        $(document).ready(function () {
+            $("#btnjQuery").click(function () {
                 alert('jQuery Button Clicked by Mouse')
             })
-        })
+            $("#btnjQuery").mouseover(function () {
+                $(this).css({ "background": "red" })
+            })
+            $("#btnjQuery").mouseleave(function () {
+                $(this).css({ "background": "white" })
+            })
+            $("#name").blur(function () {
+                var fname = $(this).val()
+                if (fname.length < 8) {
+                    $("#errmsg").show()
+                } else {
+                    $("#errmsg").hide()
+                }
+            })
+            $("#applform").validate({
+                rules: {
+                    place: {
+                        required: true,
+                        minlength: 8,
+                    },
+                    post: {
+                        required: true,
+                    },
+                    emailAddress: {
+                        email: true,
+                        required: true
+                    },
+                    mobile: {
+                        Number: true,
+                        required: true,
+                        maxlength: 12,
+                        minlength: 10
+                    },
+                    famMembers: {
+                        required: true
+                    }
+                },
+                messages: {
+                    place: {
+                        required: "Enter Place before Submitt",
+                        minlength: "Minimum 8 Letters Required"
+                    },
+                    emailAddress: "Enter valid email address"
+                }
+            });
+            $('<span style="color:red;">*</span>').insertAfter('.required');
+            });
     </script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.js"></script>
 </body>
 </html>
